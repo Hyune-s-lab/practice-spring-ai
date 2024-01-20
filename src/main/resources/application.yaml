@@ -1,1 +1,4 @@
-
+spring:
+    ai:
+        openai:
+            api-key: ${SPRING_AI_OPENAI_API_KEY} # 환경변수 주입

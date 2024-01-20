@@ -16,14 +16,19 @@ java {
 
 repositories {
     mavenCentral()
+    maven("https://repo.spring.io/milestone")
+    maven("https://repo.spring.io/snapshot")
 }
 
 dependencies {
+
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+
+    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter:0.8.0-SNAPSHOT")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
