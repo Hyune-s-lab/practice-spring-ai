@@ -26,6 +26,7 @@ class OpenAiController(
     fun generateStream(@RequestParam(defaultValue = "Tell me a joke") message: String): Flux<ChatResponse> {
         val prompt = Prompt(message)
         return streamingChatClient.generateStream(prompt)
+            .delayElements(java.time.Duration.ofMillis(300))
     }
 
     @GetMapping("/open-ai/generateStream/content-only")
@@ -34,6 +35,7 @@ class OpenAiController(
         return streamingChatClient.generateStream(prompt)
             .filter { !it.isFinished() }
             .map { it.generation.content }
+            .delayElements(java.time.Duration.ofMillis(300))
     }
 
     /**
