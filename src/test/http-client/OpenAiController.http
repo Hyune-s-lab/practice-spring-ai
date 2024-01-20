@@ -3,3 +3,8 @@ GET http://localhost:8080/open-ai/generate
 
 ###
 GET http://localhost:8080/open-ai/generateStream
+Accept: text/event-stream
+
+###
+GET http://localhost:8080/open-ai/generateStream/content-only
+Accept: text/event-stream
