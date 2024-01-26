@@ -13,3 +13,10 @@
 
 - [x] sync chat api
 - [x] sse chat api
+
+### azure-open-ai
+
+>  spring-ai-core:0.8.0-SNAPSHOT 이슈 발생
+
+- [ ] sync chat api
+- [ ] sse chat api
