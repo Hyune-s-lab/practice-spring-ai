@@ -11,7 +11,5 @@
 
 ### open-ai
 
-> com.example.practicespringai.app.controller.OpenAiController
-
-- [x] sync chat
-- [x] sse chat
+- [x] sync chat api
+- [x] sse chat api
